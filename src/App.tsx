@@ -2,6 +2,8 @@ import React from "react";
 import { Logo, Facebook, Twitter, LinkedIn } from "./components/Icons";
 import { IconLink, NavigationLink } from "./components/Links";
 import { Button } from "./components/Button";
+import { Typography } from "./components/Typography";
+
 const App: React.FC = () => {
   return (
     <div>
@@ -39,18 +41,18 @@ const App: React.FC = () => {
           <div className="w-1/2">
             <div className="flex items-center gap-3.5">
               <div className="w-9 h-0.5 bg-accent inline-block" />
-              <h1 className="text-white text-2xl font-cardo tracking-wider leading-9">
+              <Typography variant="h5" color="white">
                 Welcome to Pages!!!
-              </h1>
+              </Typography>
             </div>
-            <h2 className="mt-3.5 text-white text-6xl font-cardo tracking-wider leading-20">
+            <Typography variant="h1" color="white" className="mt-3.5">
               Your Books From <br /> The Best Writer.
-            </h2>
-            <p className="mt-6 text-lg text-secondary font-inter leading-7">
+            </Typography>
+            <Typography variant="body1" color="secondary" className="mt-6">
               We believe that reading books are essential to a healthy culture.
               <br />
-              They’re where authors can connect with readers.
-            </p>
+              They're where authors can connect with readers.
+            </Typography>
             <div className="mt-10 flex">
               <Button variant="filled" size="md">
                 Order Today
