@@ -30,7 +30,11 @@ const AuthorBook: React.FC = () => {
               <Typography variant="h6" color="accent" className="mt-2">
                 $ 13.84 USD
               </Typography>
-              <Typography variant="body1" color="tertiary" className="mt-4">
+              <Typography
+                variant="body1"
+                color="tertiary"
+                className="mt-4  text-balance"
+              >
                 As the book contains theoretical content as well as solved
                 questions.
               </Typography>
@@ -65,7 +69,11 @@ const AuthorBook: React.FC = () => {
               <Typography variant="h6" color="accent" className="mt-2">
                 $ 86.11 USD
               </Typography>
-              <Typography variant="body1" color="tertiary" className="mt-4">
+              <Typography
+                variant="body1"
+                color="tertiary"
+                className="mt-4 text-balance"
+              >
                 As the book contains theoretical content as well as solved
                 questions.
               </Typography>
