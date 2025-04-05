@@ -20,25 +20,33 @@ export type TypographyColor =
   | "tertiary"
   | "white";
 
+export type TypographyFont = "cardo" | "inter";
+
 interface TypographyProps {
   variant?: TypographyVariant;
   color?: TypographyColor;
+  font?: TypographyFont;
   className?: string;
   children: React.ReactNode;
   component?: ElementType;
 }
 
 const variantStyles: Record<TypographyVariant, string> = {
-  h1: "text-6xl font-cardo tracking-wider leading-20",
-  h2: "text-5xl font-cardo tracking-wider leading-16",
-  h3: "text-4xl font-cardo tracking-wider leading-14",
-  h4: "text-3xl font-cardo tracking-wider leading-12",
-  h5: "text-2xl font-cardo tracking-wider leading-9",
-  h6: "text-xl font-cardo tracking-wider leading-8",
-  body1: "text-lg font-inter leading-7",
-  body2: "text-base font-inter leading-6",
-  caption: "text-sm font-inter leading-5",
-  overline: "text-xs font-inter leading-4 tracking-widest uppercase",
+  h1: "text-6xl tracking-wider leading-20",
+  h2: "text-5xl tracking-wider leading-16",
+  h3: "text-4xl tracking-wider leading-14",
+  h4: "text-3xl tracking-wider leading-12",
+  h5: "text-2xl tracking-wider leading-9",
+  h6: "text-xl tracking-wider leading-8",
+  body1: "text-lg leading-7",
+  body2: "text-base leading-6",
+  caption: "text-sm leading-5",
+  overline: "text-xs leading-4 tracking-widest uppercase",
+};
+
+const fontStyles: Record<TypographyFont, string> = {
+  cardo: "font-cardo",
+  inter: "font-inter",
 };
 
 const colorStyles: Record<TypographyColor, string> = {
@@ -65,6 +73,7 @@ const defaultComponents: Record<TypographyVariant, ElementType> = {
 export const Typography: React.FC<TypographyProps> = ({
   variant = "body1",
   color = "primary",
+  font = "inter",
   className = "",
   children,
   component,
@@ -72,9 +81,12 @@ export const Typography: React.FC<TypographyProps> = ({
   const Component = component || defaultComponents[variant];
   const baseStyles = variantStyles[variant];
   const colorStyle = colorStyles[color];
+  const fontStyle = fontStyles[font];
 
   return (
-    <Component className={twMerge(baseStyles, colorStyle, className)}>
+    <Component
+      className={twMerge(baseStyles, colorStyle, fontStyle, className)}
+    >
       {children}
     </Component>
   );
