@@ -7,7 +7,7 @@ import { Circle } from "../components/Circle";
 const AuthorBook: React.FC = () => {
   return (
     <section className="bg-white">
-      <div className="max-w-[1300px] mx-auto px-5 py-20">
+      <div className="max-w-[1300px] mx-auto px-5 pt-32 pb-24">
         <SectionHeader title="The Author’s Book" />
         <div className="flex items-center gap-12  mt-16">
           <div className="flex gap-7 max-w-1/2 ">
