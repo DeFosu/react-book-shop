@@ -21,7 +21,7 @@ const sizeClasses = {
 
 const variantClasses = {
   outlined:
-    "border border-accent text-accent hover:bg-accent/10  tracking-wide",
+    "border-2 border-accent text-primary hover:bg-accent/10  tracking-wide",
   filled: "bg-accent text-primary hover:bg-accent/90 tracking-wider",
   text: "text-white tracking-wider",
 };
