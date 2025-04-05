@@ -4,6 +4,7 @@ import { Logo, Facebook, Twitter, LinkedIn } from "../components/Icons";
 import { IconLink, NavigationLink } from "../components/Links";
 import { Typography } from "../components/Typography";
 import { Divider } from "../components/Devider";
+import { Circle } from "../components/Circle";
 
 const Home: React.FC = () => {
   return (
@@ -41,11 +42,16 @@ const Home: React.FC = () => {
         <div className="w-1/2">
           <div className="flex items-center gap-3.5">
             <Divider />
-            <Typography variant="h5" color="white">
+            <Typography variant="h5" color="white" font="cardo">
               Welcome to Pages!!!
             </Typography>
           </div>
-          <Typography variant="h1" color="white" className="mt-3.5">
+          <Typography
+            variant="h1"
+            color="white"
+            className="mt-3.5"
+            font="cardo"
+          >
             Your Books From <br /> The Best Writer.
           </Typography>
           <Typography variant="body1" color="secondary" className="mt-6">
@@ -60,6 +66,50 @@ const Home: React.FC = () => {
             <Button variant="text" size="md">
               Read Free Demo
             </Button>
+          </div>
+          <div className="mt-12 flex items-center gap-14">
+            <div>
+              <div className="flex items-center gap-2.5">
+                <Circle />
+                <Typography variant="h5" color="white" font="cardo">
+                  Pages:
+                </Typography>
+              </div>
+              <div className="flex items-center gap-2.5 mt-3">
+                <Circle className="bg-transparent" />
+                <Typography variant="body2" color="secondary">
+                  250 pages
+                </Typography>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-2.5">
+                <Circle />
+                <Typography variant="h5" color="white" font="cardo">
+                  Length:
+                </Typography>
+              </div>
+              <div className="flex items-center gap-2.5 mt-3">
+                <Circle className="bg-transparent" />
+                <Typography variant="body2" color="secondary">
+                  10 Hours
+                </Typography>
+              </div>
+            </div>
+            <div>
+              <div className="flex items-center gap-2.5">
+                <Circle />
+                <Typography variant="h5" color="white" font="cardo">
+                  Rating:
+                </Typography>
+              </div>
+              <div className="flex items-center gap-2.5 mt-3">
+                <Circle className="bg-transparent" />
+                <Typography variant="body2" color="secondary">
+                  4.5/5 (305 ratings)
+                </Typography>
+              </div>
+            </div>
           </div>
         </div>
         <div className="w-1/2">
